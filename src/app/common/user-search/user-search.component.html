@@ -1,0 +1,28 @@
+
+  <div class="container">
+    <div class="row">
+      <br><br>
+      <div class="input-group mb-3">
+          <input type="text" [(ngModel)]="username" class="form-control" placeholder="Please write username" aria-label="Recipient's username" aria-describedby="button-addon2" >
+          <button class="btn btn-primary" type="button" id="button-addon2" (click)="getUserInf()" >Search</button>
+        </div>
+
+
+    <div *ngFor="let user of users" class="col-md-3">
+
+        <div   class="card" >
+        <img src="{{user.avatar_url}}" class="card-img-top" alt="..." >
+        <div class="card-body">
+          <h5 class="card-title">{{user.login}}</h5>
+
+          <a href="{{user.html_url}}" target="_blank" class="btn btn-dark">GitHub</a>
+
+        </div>
+
+    </div>
+
+
+</div>
+</div>
+</div>
+
